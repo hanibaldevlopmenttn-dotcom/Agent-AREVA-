@@ -1,0 +1,50 @@
+{
+  "bonjour": {
+    "fr": "Bonjour ! 👋 Bienvenue chez **Arvea Nature** 🌿\nJe suis votre assistant commercial. Comment puis-je vous aider ?\n\n▫️ /produits — Voir nos produits\n▫️ /commande — Passer une commande\n▫️ /contact — Nous contacter\n▫️ /aide — Aide complète",
+    "ar": "أهلاً وسهلاً! 👋 مرحباً بك في **أرفيا نيتشر** 🌿\nأنا مساعدك التجاري. كيف يمكنني مساعدتك؟\n\n▫️ /produits — شوف المنتجات\n▫️ /commande — اطلب الآن\n▫️ /contact — تواصل معنا\n▫️ /aide — المساعدة الكاملة"
+  },
+  "livraison": {
+    "fr": "🚚 **Informations de livraison**\n\n📍 Nous livrons partout en Tunisie.\n⏱️ Délai : 2 à 5 jours ouvrables selon votre région.\n💰 Frais de livraison : gratuits dès 100 TND d'achat, sinon 7 TND.\n\nPour commander, tapez /commande 🛒",
+    "ar": "🚚 **معلومات التوصيل**\n\n📍 نوصل لكل تونس.\n⏱️ المدة: 2 إلى 5 أيام عمل حسب منطقتك.\n💰 مصاريف التوصيل: مجاني من 100 دينار، وإلا 7 دينار.\n\nباش تطلب، إكتب /commande 🛒"
+  },
+  "paiement": {
+    "fr": "💳 **Modes de paiement acceptés**\n\n✅ Paiement à la livraison (espèces)\n✅ Virement bancaire (Banque BNA, STB, BH Bank)\n✅ Chèque certifié\n\n⚠️ Le paiement en ligne n'est pas encore disponible.",
+    "ar": "💳 **طرق الدفع المقبولة**\n\n✅ الدفع عند التسليم (نقداً)\n✅ تحويل بنكي (BNA، STB، BH Bank)\n✅ شيك مصادق عليه\n\n⚠️ الدفع الإلكتروني متاحش بعد."
+  },
+  "retour": {
+    "fr": "🔄 **Politique de retour**\n\nNous acceptons les retours dans un délai de **7 jours** après réception si :\n- Le produit est intact et non ouvert\n- L'emballage d'origine est conservé\n\nContactez-nous via /contact pour initier un retour.",
+    "ar": "🔄 **سياسة الإرجاع**\n\nنقبل الإرجاع في مدة **7 أيام** بعد الاستلام إذا:\n- المنتج سليم وما انفتحش\n- العلبة الأصلية موجودة\n\nتواصل معنا عبر /contact باش تبدأ الإرجاع."
+  },
+  "collagene": {
+    "fr": "🐟 **Collagène Marin — 85 TND**\n\nComplément alimentaire premium pour :\n✨ Peau plus ferme et lumineuse\n💅 Ongles renforcés\n💇 Cheveux plus épais et brillants\n🦴 Soutien des articulations\n\nConseillé : 1 sachet/jour le matin à jeun.\n\nPour commander → /commande",
+    "ar": "🐟 **كولاجين بحري — 85 دينار**\n\nمكمل غذائي فاخر من أجل:\n✨ بشرة أكثر نضارة وإشراقاً\n💅 أظافر أقوى\n💇 شعر أكثف وأكثر لمعاناً\n🦴 دعم المفاصل\n\nنصيحة: كيس واحد يومياً صباحاً على الريق.\n\nباش تطلب → /commande"
+  },
+  "argan": {
+    "fr": "✨ **Huile d'Argan Pure — 45 TND**\n\n100% naturelle, pressée à froid :\n🌟 Hydratation intense de la peau\n💆 Soin des cheveux secs et abîmés\n🌙 Sérum de nuit anti-rides\n\nUsage : quelques gouttes suffisent !\n\nPour commander → /commande",
+    "ar": "✨ **زيت أرغان خالص — 45 دينار**\n\n100% طبيعي، معصور على البارد:\n🌟 ترطيب مكثف للبشرة\n💆 علاج الشعر الجاف والتالف\n🌙 سيروم ليلي مضاد للتجاعيد\n\nكيفية الاستخدام: بضع قطرات تكفي!\n\nباش تطلب → /commande"
+  },
+  "brule_graisse": {
+    "fr": "🔥 **Brûle Graisse Naturel — 65 TND**\n\nFormule 100% végétale pour :\n⚡ Accélérer votre métabolisme\n🏋️ Favoriser la combustion des graisses\n💪 Maintenir l'énergie toute la journée\n\nConseillé : 2 gélules/jour avec un grand verre d'eau.\n\nPour commander → /commande",
+    "ar": "🔥 **حارق الدهون الطبيعي — 65 دينار**\n\nتركيبة 100% نباتية من أجل:\n⚡ تسريع الأيض\n🏋️ تعزيز حرق الدهون\n💪 الحفاظ على الطاقة طول اليوم\n\nنصيحة: 2 كبسولة يومياً مع كوب ماء كبير.\n\nباش تطلب → /commande"
+  },
+  "multivitamine": {
+    "fr": "💊 **Complément Multivitaminé — 55 TND**\n\nComplexe complet de vitamines A, B, C, D, E + Minéraux :\n🌞 Boost d'immunité\n🧠 Concentration et mémoire\n💪 Tonus et vitalité\n\nConseillé : 1 comprimé/jour au petit-déjeuner.\n\nPour commander → /commande",
+    "ar": "💊 **مكمل متعدد الفيتامينات — 55 دينار**\n\nمركب كامل من فيتامينات A, B, C, D, E + معادن:\n🌞 تقوية المناعة\n🧠 التركيز والذاكرة\n💪 الحيوية والنشاط\n\nنصيحة: قرص واحد يومياً مع الإفطار.\n\nباش تطلب → /commande"
+  },
+  "tisane": {
+    "fr": "🌿 **Tisane Détox — 35 TND**\n\nMélange de 12 plantes biologiques :\n🫖 Élimination des toxines\n🌀 Amélioration du transit intestinal\n😴 Meilleur sommeil\n⚡ Légèreté et énergie\n\nConseillé : 1 tasse le soir avant de dormir.\n\nPour commander → /commande",
+    "ar": "🌿 **شاي ديتوكس — 35 دينار**\n\nمزيج من 12 نبتة عضوية:\n🫖 طرد السموم\n🌀 تحسين الهضم\n😴 نوم أفضل\n⚡ خفة وطاقة\n\nنصيحة: فنجان واحد مسا قبل النوم.\n\nباش تطلب → /commande"
+  },
+  "creme": {
+    "fr": "🌸 **Crème Anti-Âge Naturelle — 95 TND**\n\nFormule régénérante aux extraits botaniques rares :\n✨ Réduction des rides\n💧 Hydratation 24h\n🌟 Éclat et uniformisation du teint\n🌙 Efficacité maximale la nuit\n\nApplication : matin et soir sur peau propre.\n\nPour commander → /commande",
+    "ar": "🌸 **كريم مضاد للشيخوخة الطبيعي — 95 دينار**\n\nتركيبة مجددة بمستخلصات نباتية نادرة:\n✨ تقليل التجاعيد\n💧 ترطيب 24 ساعة\n🌟 إشراق وتوحيد لون البشرة\n🌙 فعالية قصوى ليلاً\n\nالاستخدام: صباحاً ومساءً على بشرة نظيفة.\n\nباش تطلب → /commande"
+  },
+  "contact": {
+    "fr": "📞 **Contactez Arvea Nature**\n\n📱 WhatsApp : +216 00 000 000\n📧 Email : contact@arvea-nature.tn\n🌐 Site web : https://hanibaldevlopmenttn-dotcom.github.io/Agent-AREVA-/\n🤖 Telegram : @orchestre_tilisi_bot\n\n⏰ Disponibles du Lundi au Samedi, 9h-18h",
+    "ar": "📞 **تواصل مع أرفيا نيتشر**\n\n📱 واتساب: 00 000 000 216+\n📧 إيميل: contact@arvea-nature.tn\n🌐 الموقع: https://hanibaldevlopmenttn-dotcom.github.io/Agent-AREVA-/\n🤖 تيليغرام: @orchestre_tilisi_bot\n\n⏰ متاحين من الاثنين للسبت، 9 صباحاً - 6 مساءً"
+  },
+  "aide": {
+    "fr": "ℹ️ **Aide & Commandes disponibles**\n\n🛍️ **Produits**\n/produits — Liste complète\n/collagene — Collagène Marin\n/argan — Huile d'Argan\n/brulegraisse — Brûle Graisse\n/multivitamine — Multivitamines\n/tisane — Tisane Détox\n/creme — Crème Anti-Âge\n\n🛒 **Commander**\n/commande — Passer une commande\n\n❓ **Informations**\n/livraison — Infos livraison\n/paiement — Modes de paiement\n/retour — Politique de retour\n/contact — Nous contacter\n\n🌐 **Langue** : /fr ou /ar",
+    "ar": "ℹ️ **المساعدة والأوامر المتاحة**\n\n🛍️ **المنتجات**\n/produits — القائمة الكاملة\n/collagene — كولاجين بحري\n/argan — زيت أرغان\n/brulegraisse — حارق الدهون\n/multivitamine — متعدد الفيتامينات\n/tisane — شاي ديتوكس\n/creme — كريم مضاد للشيخوخة\n\n🛒 **الطلب**\n/commande — اطلب الآن\n\n❓ **المعلومات**\n/livraison — معلومات التوصيل\n/paiement — طرق الدفع\n/retour — سياسة الإرجاع\n/contact — تواصل معنا\n\n🌐 **اللغة**: /fr أو /ar"
+  }
+}

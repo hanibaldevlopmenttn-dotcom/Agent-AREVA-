@@ -1,0 +1,146 @@
+// ============================================================
+// GOOGLE APPS SCRIPT — Arvea Nature
+// Fichier : google_apps_script.txt
+//
+// INSTRUCTIONS DE DÉPLOIEMENT :
+// 1. Ouvrir : https://script.google.com → Nouveau projet
+// 2. Coller tout ce code dans l'éditeur
+// 3. Remplacer SHEET_ID par l'ID de votre Google Sheets
+//    (URL Sheets: .../spreadsheets/d/[SHEET_ID]/edit)
+// 4. Déployer → Nouveau déploiement
+//    → Type : Application Web
+//    → Exécuter en tant que : Moi
+//    → Accès : Tout le monde (anonyme)
+// 5. Copier l'URL de déploiement dans site_web/script.js
+//    variable GOOGLE_SHEETS_URL
+// ============================================================
+
+const SHEET_ID = "VOTRE_GOOGLE_SHEET_ID_ICI";
+const SHEET_NAME = "Commandes";
+
+function doPost(e) {
+  try {
+    const data = JSON.parse(e.postData.contents);
+    const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME)
+      || SpreadsheetApp.openById(SHEET_ID).insertSheet(SHEET_NAME);
+
+    // Créer l'en-tête si la feuille est vide
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow([
+        "Date",
+        "Prénom",
+        "Nom",
+        "Téléphone",
+        "Email",
+        "Ville",
+        "Produit",
+        "Prix Unitaire (TND)",
+        "Quantité",
+        "Total (TND)",
+        "Message",
+        "Source",
+        "Statut"
+      ]);
+      sheet.getRange(1, 1, 1, 13).setFontWeight("bold")
+        .setBackground("#2d6a4f")
+        .setFontColor("#ffffff");
+      sheet.setFrozenRows(1);
+    }
+
+    const total = (parseFloat(data.prix || 0) * parseInt(data.quantite || 1)).toFixed(2);
+
+    sheet.appendRow([
+      data.date || new Date().toLocaleString("fr-TN"),
+      data.prenom || "",
+      data.nom || "",
+      data.telephone || "",
+      data.email || "",
+      data.ville || "",
+      data.produit || "",
+      data.prix || "",
+      data.quantite || "1",
+      total,
+      data.message || "",
+      data.source || "site_web",
+      "En attente"
+    ]);
+
+    // Auto-resize colonnes
+    sheet.autoResizeColumns(1, 13);
+
+    // Réponse CORS-compatible
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "success", total: total }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "error", message: err.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "ok", message: "Arvea Nature API is running." }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ── Rapport journalier automatique ──────────────────────────────────────────
+// Optionnel : configurer un déclencheur quotidien sur cette fonction
+// via Déclencheurs → Basé sur le temps → Quotidien
+
+function envoyerRapportJournalier() {
+  const spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+  const sheet = spreadsheet.getSheetByName(SHEET_NAME);
+  if (!sheet || sheet.getLastRow() < 2) return;
+
+  const data = sheet.getDataRange().getValues();
+  const headers = data[0];
+  const rows = data.slice(1);
+
+  const today = new Date();
+  const todayStr = today.toLocaleDateString("fr-TN");
+
+  // Commandes du jour
+  const commandesAujourdhui = rows.filter(r => {
+    const d = new Date(r[0]);
+    return d.toLocaleDateString("fr-TN") === todayStr;
+  });
+
+  // Calcul totaux
+  const totalCA = commandesAujourdhui.reduce((acc, r) => acc + parseFloat(r[9] || 0), 0);
+  const nbCommandes = commandesAujourdhui.length;
+
+  // Comptage par produit
+  const parProduit = {};
+  commandesAujourdhui.forEach(r => {
+    const p = r[6] || "Inconnu";
+    parProduit[p] = (parProduit[p] || 0) + 1;
+  });
+  const topProduits = Object.entries(parProduit)
+    .sort((a, b) => b[1] - a[1])
+    .map(([nom, nb]) => `• ${nom} : ${nb} commande(s)`)
+    .join("\n");
+
+  const sujet = `📊 Rapport Arvea Nature — ${todayStr}`;
+  const corps = `
+Rapport du ${todayStr}
+${"=".repeat(40)}
+✅ Commandes aujourd'hui : ${nbCommandes}
+💰 CA du jour : ${totalCA.toFixed(2)} TND
+${"─".repeat(40)}
+Top produits :
+${topProduits || "Aucune commande"}
+
+Généré automatiquement par Arvea Nature Bot 🌿
+  `.trim();
+
+  // Remplacer par votre email admin
+  const ADMIN_EMAIL = "votre@email.com";
+  MailApp.sendEmail({
+    to: ADMIN_EMAIL,
+    subject: sujet,
+    body: corps
+  });
+}

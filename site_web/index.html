@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arvea Nature — Cosmétiques et bien-être naturels made in Tunisie. Collagène Marin, Huile d'Argan, Crème Anti-Âge et plus." />
+  <title>Arvea Nature 🌿 | Cosmétiques Naturels Tunisie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__logo">🌿 <span>Arvea Nature</span></div>
+      <div class="nav__links">
+        <a href="#produits">Produits</a>
+        <a href="#commande">Commander</a>
+        <a href="#contact">Contact</a>
+        <a href="https://t.me/orchestre_tilisi_bot" target="_blank" class="btn btn--telegram">🤖 Bot Telegram</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__content">
+      <span class="hero__badge">🇹🇳 Made in Tunisia</span>
+      <h1 class="hero__title">La Nature au Service<br>de Votre Beauté</h1>
+      <p class="hero__subtitle">Découvrez notre gamme de cosmétiques et compléments alimentaires 100% naturels, formulés avec des ingrédients sélectionnés pour votre bien-être.</p>
+      <div class="hero__actions">
+        <a href="#produits" class="btn btn--primary">Voir nos produits</a>
+        <a href="https://t.me/orchestre_tilisi_bot" target="_blank" class="btn btn--secondary">Commander via Telegram</a>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="hero__badge-floating">🌿</div>
+    </div>
+  </section>
+
+  <!-- PRODUITS -->
+  <section class="produits" id="produits">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Nos produits</span>
+        <h2 class="section__title">Nos 6 Produits Phares</h2>
+        <p class="section__subtitle">Chaque produit est formulé avec soin pour vous offrir les meilleurs résultats naturels.</p>
+      </div>
+      <div class="produits__grid">
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">🐟</div>
+          <div class="produit-card__badge">Best Seller</div>
+          <h3 class="produit-card__nom">Collagène Marin</h3>
+          <p class="produit-card__desc">Complément premium pour la peau, les ongles et les cheveux. Résultats visibles en 4 semaines.</p>
+          <div class="produit-card__prix">85 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Collagène Marin', 85)">Commander</button>
+        </div>
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">🔥</div>
+          <h3 class="produit-card__nom">Brûle Graisse Naturel</h3>
+          <p class="produit-card__desc">Formule 100% végétale pour accélérer le métabolisme et favoriser la perte de poids.</p>
+          <div class="produit-card__prix">65 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Brûle Graisse Naturel', 65)">Commander</button>
+        </div>
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">✨</div>
+          <h3 class="produit-card__nom">Huile d'Argan Pure</h3>
+          <p class="produit-card__desc">100% naturelle, pressée à froid. Soin multi-usage pour cheveux et peau.</p>
+          <div class="produit-card__prix">45 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Huile d\'Argan Pure', 45)">Commander</button>
+        </div>
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">💊</div>
+          <h3 class="produit-card__nom">Complément Multivitaminé</h3>
+          <p class="produit-card__desc">Complexe vitamines A, B, C, D, E + minéraux pour une vitalité quotidienne optimale.</p>
+          <div class="produit-card__prix">55 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Complément Multivitaminé', 55)">Commander</button>
+        </div>
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">🌿</div>
+          <h3 class="produit-card__nom">Tisane Détox</h3>
+          <p class="produit-card__desc">Mélange de 12 plantes biologiques pour purifier l'organisme et améliorer le transit.</p>
+          <div class="produit-card__prix">35 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Tisane Détox', 35)">Commander</button>
+        </div>
+
+        <div class="produit-card">
+          <div class="produit-card__emoji">🌸</div>
+          <div class="produit-card__badge produit-card__badge--premium">Premium</div>
+          <h3 class="produit-card__nom">Crème Anti-Âge Naturelle</h3>
+          <p class="produit-card__desc">Formule régénérante aux extraits botaniques rares pour une peau jeune et lumineuse.</p>
+          <div class="produit-card__prix">95 <span>TND</span></div>
+          <button class="btn btn--commander" onclick="selectProduct('Crème Anti-Âge Naturelle', 95)">Commander</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE DE COMMANDE -->
+  <section class="commande" id="commande">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Commander</span>
+        <h2 class="section__title">Passez Votre Commande</h2>
+        <p class="section__subtitle">Remplissez le formulaire et notre équipe vous contacte sous 24h.</p>
+      </div>
+      <div class="commande__wrapper">
+        <div class="form-card">
+          <div id="form-success" class="form-success hidden">
+            <div class="form-success__icon">✅</div>
+            <h3>Commande envoyée !</h3>
+            <p>Nous vous contacterons sous 24h pour confirmer votre commande.</p>
+            <button class="btn btn--primary" onclick="resetForm()">Nouvelle commande</button>
+          </div>
+          <form id="commande-form" class="commande-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom *</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom *</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone / WhatsApp *</label>
+              <input type="tel" id="telephone" name="telephone" placeholder="+216 XX XXX XXX" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email (optionnel)</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="ville">Ville *</label>
+              <select id="ville" name="ville" required>
+                <option value="">Sélectionnez votre ville</option>
+                <option>Tunis</option><option>Sfax</option><option>Sousse</option>
+                <option>Bizerte</option><option>Gabès</option><option>Ariana</option>
+                <option>Gafsa</option><option>Monastir</option><option>Ben Arous</option>
+                <option>Kasserine</option><option>Médenine</option><option>Kairouan</option>
+                <option>Nabeul</option><option>Béja</option><option>Jendouba</option>
+                <option>Mahdia</option><option>Sidi Bouzid</option><option>Tozeur</option>
+                <option>Siliana</option><option>Zaghouan</option><option>Kébili</option>
+                <option>Le Kef</option><option>Tataouine</option><option>Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="produit">Produit souhaité *</label>
+              <select id="produit" name="produit" required>
+                <option value="">Sélectionnez un produit</option>
+                <option value="Collagène Marin|85">🐟 Collagène Marin — 85 TND</option>
+                <option value="Brûle Graisse Naturel|65">🔥 Brûle Graisse Naturel — 65 TND</option>
+                <option value="Huile d'Argan Pure|45">✨ Huile d'Argan Pure — 45 TND</option>
+                <option value="Complément Multivitaminé|55">💊 Complément Multivitaminé — 55 TND</option>
+                <option value="Tisane Détox|35">🌿 Tisane Détox — 35 TND</option>
+                <option value="Crème Anti-Âge Naturelle|95">🌸 Crème Anti-Âge Naturelle — 95 TND</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantite">Quantité</label>
+              <select id="quantite" name="quantite">
+                <option value="1">1</option><option value="2">2</option>
+                <option value="3">3</option><option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message / Adresse de livraison</label>
+              <textarea id="message" name="message" rows="3" placeholder="Précisez votre adresse complète ou tout message utile..."></textarea>
+            </div>
+
+            <div id="form-error" class="form-error hidden">
+              ⚠️ Une erreur est survenue. Veuillez réessayer ou commander via Telegram.
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">
+              <span id="btn-text">Envoyer ma commande</span>
+              <span id="btn-loader" class="hidden">⏳ Envoi en cours...</span>
+            </button>
+
+            <div class="form-alt">
+              <p>Ou commandez directement via :</p>
+              <a href="https://t.me/orchestre_tilisi_bot" target="_blank" class="btn btn--telegram btn--full">🤖 Telegram Bot</a>
+              <a id="whatsapp-link" href="#" class="btn btn--whatsapp btn--full">💬 WhatsApp</a>
+            </div>
+          </form>
+        </div>
+
+        <div class="commande__info">
+          <div class="info-card">
+            <div class="info-card__icon">🚚</div>
+            <h4>Livraison partout en Tunisie</h4>
+            <p>2 à 5 jours ouvrables. Gratuite dès 100 TND.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">💰</div>
+            <h4>Paiement à la livraison</h4>
+            <p>Payez uniquement à la réception de votre colis.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🔄</div>
+            <h4>Retours acceptés</h4>
+            <p>7 jours pour retourner un produit non ouvert.</p>
+          </div>
+          <div class="info-card">
+            <div class="info-card__icon">🌿</div>
+            <h4>100% Naturel</h4>
+            <p>Formules sans parabènes, sans colorants artificiels.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__label">Contact</span>
+        <h2 class="section__title">Contactez-Nous</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact-card">
+          <div class="contact-card__icon">📱</div>
+          <h4>WhatsApp</h4>
+          <a href="https://wa.me/21600000000" target="_blank">+216 00 000 000</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">🤖</div>
+          <h4>Telegram Bot</h4>
+          <a href="https://t.me/orchestre_tilisi_bot" target="_blank">@orchestre_tilisi_bot</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">📧</div>
+          <h4>Email</h4>
+          <a href="mailto:contact@arvea-nature.tn">contact@arvea-nature.tn</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-card__icon">⏰</div>
+          <h4>Horaires</h4>
+          <p>Lun–Sam : 9h–18h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <span class="footer__logo">🌿 Arvea Nature</span>
+          <p>Cosmétiques et bien-être naturels — Tunisie 🇹🇳</p>
+        </div>
+        <div class="footer__links">
+          <a href="#produits">Produits</a>
+          <a href="#commande">Commander</a>
+          <a href="#contact">Contact</a>
+          <a href="https://t.me/orchestre_tilisi_bot" target="_blank">Telegram</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2024 Arvea Nature. Tous droits réservés. Fait avec 💚 en Tunisie.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

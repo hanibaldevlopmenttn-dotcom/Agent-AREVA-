@@ -1,0 +1,76 @@
+{
+  "entreprise": {
+    "nom": "Arvea Nature",
+    "pays": "Tunisie",
+    "secteur": "Cosmétique / Bien-être",
+    "telephone_whatsapp": "+21600000000",
+    "email_contact": "contact@arvea-nature.tn",
+    "site_web": "https://hanibaldevlopmenttn-dotcom.github.io/Agent-AREVA-/"
+  },
+  "produits": [
+    {
+      "id": "P001",
+      "nom_fr": "Collagène Marin",
+      "nom_ar": "كولاجين بحري",
+      "prix_tnd": 85,
+      "description_fr": "Complément alimentaire premium pour la peau, les ongles et les cheveux.",
+      "description_ar": "مكمل غذائي فاخر للبشرة والأظافر والشعر.",
+      "emoji": "🐟"
+    },
+    {
+      "id": "P002",
+      "nom_fr": "Brûle Graisse Naturel",
+      "nom_ar": "حارق الدهون الطبيعي",
+      "prix_tnd": 65,
+      "description_fr": "Formule naturelle pour accélérer le métabolisme et mincir efficacement.",
+      "description_ar": "تركيبة طبيعية لتسريع الأيض والتخسيس بفعالية.",
+      "emoji": "🔥"
+    },
+    {
+      "id": "P003",
+      "nom_fr": "Huile d'Argan Pure",
+      "nom_ar": "زيت أرغان خالص",
+      "prix_tnd": 45,
+      "description_fr": "Huile 100% pure pressée à froid, soin multi-usage cheveux et peau.",
+      "description_ar": "زيت خالص 100% معصور على البارد، عناية متعددة الاستخدامات للشعر والبشرة.",
+      "emoji": "✨"
+    },
+    {
+      "id": "P004",
+      "nom_fr": "Complément Multivitaminé",
+      "nom_ar": "مكمل متعدد الفيتامينات",
+      "prix_tnd": 55,
+      "description_fr": "Complexe de vitamines et minéraux essentiels pour la vitalité quotidienne.",
+      "description_ar": "مركب من الفيتامينات والمعادن الأساسية للحيوية اليومية.",
+      "emoji": "💊"
+    },
+    {
+      "id": "P005",
+      "nom_fr": "Tisane Détox",
+      "nom_ar": "شاي ديتوكس",
+      "prix_tnd": 35,
+      "description_fr": "Mélange de plantes biologiques pour purifier l'organisme et favoriser le transit.",
+      "description_ar": "مزيج من النباتات العضوية لتنقية الجسم وتحسين الهضم.",
+      "emoji": "🌿"
+    },
+    {
+      "id": "P006",
+      "nom_fr": "Crème Anti-Âge Naturelle",
+      "nom_ar": "كريم مضاد للشيخوخة الطبيعي",
+      "prix_tnd": 95,
+      "description_fr": "Crème de nuit régénérante aux extraits botaniques rares pour une peau jeune.",
+      "description_ar": "كريم ليلي مجدد بمستخلصات نباتية نادرة لبشرة شابة.",
+      "emoji": "🌸"
+    }
+  ],
+  "bot": {
+    "langue_defaut": "fr",
+    "langues_supportees": ["fr", "ar"],
+    "delai_reponse_max_sec": 2,
+    "fuseau_horaire": "Africa/Tunis"
+  },
+  "commandes": {
+    "statuts_valides": ["en_attente", "confirmee", "en_preparation", "expediee", "livree", "annulee"],
+    "statut_defaut": "en_attente"
+  }
+}
