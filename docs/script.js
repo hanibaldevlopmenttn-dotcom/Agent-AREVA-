@@ -3,7 +3,7 @@
    =================================== */
 
 const WHATSAPP_NUMBER = "21600000000";
-const GOOGLE_SHEETS_URL = ""; // Coller ici l'URL de déploiement Google Apps Script
+const GOOGLE_SHEETS_URL = "https://script.google.com/macros/s/AKfycbwpPSXX5Co8XtOCG-I9QAKk3qn6gtw-e1qhY2SYTcrN5toWZ88CpTMxZUl4siWIELb5pA/exec"; // Coller ici l'URL de déploiement Google Apps Script
 
 // ── Pré-sélection produit depuis les cartes ──────────────────────────────────
 function selectProduct(nomProduit, prix) {
